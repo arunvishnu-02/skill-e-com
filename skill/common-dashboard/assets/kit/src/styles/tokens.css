@@ -1,0 +1,115 @@
+/*
+ * dashboard-kit — fixed master tokens (from Figma 297:805).
+ * Brand colours come from createTheme()/ThemeProvider as --cd-* variables.
+ * The defaults below reproduce the master (AK57) theme so components render
+ * correctly even before a theme is applied.
+ */
+:root,
+.cd-root {
+  /* ---- brand (overridden per client by createTheme) ---- */
+  --cd-primary: #f5ef0f;
+  --cd-primary-hover: #e3dd09;
+  --cd-primary-active: #c9c300;
+  --cd-primary-border: #c9c300;
+  --cd-primary-soft: #fefde2;
+  --cd-on-primary: #0e0e0e;
+  --cd-primary-text: #6b6800;
+  --cd-secondary: #0e0e0e;
+  --cd-secondary-hover: #232323;
+  --cd-secondary-raised: #1b1b1b;
+  --cd-secondary-raised-2: #2a2a2a;
+  --cd-secondary-divider: rgba(255, 255, 255, 0.14);
+  --cd-on-secondary: #ffffff;
+  --cd-on-secondary-subtle: #d6d6d6;
+  --cd-on-secondary-muted: #9a9a9a;
+  --cd-accent: #f5c518;
+  --cd-accent-border: #0e0e0e;
+  --cd-on-accent: #0e0e0e;
+  --cd-kpi-featured-value: #f5ef0f;
+  --cd-kpi-featured-label: #bdbdbd;
+  --cd-delta-up-on-dark: #7ce3a8;
+
+  /* ---- neutrals (master, fixed) ---- */
+  --cd-bg: #f3f2ee;
+  --cd-surface: #ffffff;
+  --cd-subtle: #f3f2ee;
+  --cd-border: #e4e1d8;
+  --cd-border-card: #e7e5df;
+  --cd-border-strong: #d9d6cf;
+  --cd-text: #0e0e0e;
+  --cd-text-strong: #3a3a3a;
+  --cd-text-secondary: #6b6b6b;
+  --cd-text-placeholder: #6e6a60;
+  --cd-row-highlight: #fffde6;
+  --cd-thumb: #e8e4da;
+  --cd-overlay: rgba(14, 14, 14, 0.4);
+  --cd-unread-bg: #f3f1ec;
+  --cd-chart-bar: #0e0e0e;
+  --cd-chart-highlight: #f5c518;
+  --cd-chart-track: #f3f2ee;
+
+  /* ---- status (master, fixed) ---- */
+  --cd-success: #177a45;
+  --cd-success-bg: #ddf3e7;
+  --cd-warning: #8a5e00;
+  --cd-warning-bg: #fbf0d5;
+  --cd-danger: #b8340d;
+  --cd-danger-bg: #fbe3dc;
+  --cd-info: #2860c0;
+  --cd-info-bg: #e5ecf8;
+  --cd-focus-ring: #8f8b00;
+
+  /* ---- type ---- */
+  --cd-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --cd-font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --cd-fs-kpi: 38px;
+  --cd-fs-display: 22px;
+  --cd-fs-page: 26px;
+  --cd-fs-card: 17px;
+  --cd-fs-panel: 16px;
+  --cd-fs-14: 14px;
+  --cd-fs-13: 13px;
+  --cd-fs-12: 12px;
+  --cd-fs-11: 11px;
+  --cd-tracking-overline: 0.08em;
+
+  /* ---- radius ---- */
+  --cd-radius-xs: 4px;
+  --cd-radius-sm: 6px;
+  --cd-radius-md: 8px;
+  --cd-radius-lg: 10px;
+  --cd-radius-xl: 12px;
+  --cd-radius-2xl: 14px;
+  --cd-radius-modal: 16px;
+  --cd-radius-card: 18px;
+  --cd-radius-pill: 999px;
+
+  /* ---- spacing / layout ---- */
+  --cd-page-x: 32px;
+  --cd-page-y: 28px;
+  --cd-section-gap: 24px;
+  --cd-grid-gap: 16px;
+  --cd-card-pad: 24px;
+  --cd-kpi-pad: 22px;
+  --cd-sidebar-w: 251px;
+  --cd-sidebar-rail-w: 76px;
+  --cd-control-h: 44px;
+  --cd-input-h: 46px;
+  --cd-mobile-x: 16px;
+  --cd-tabbar-h: 72px;
+
+  /* ---- elevation ---- */
+  --cd-shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.14);
+  --cd-shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.24);
+
+  /* ---- motion (derived) ---- */
+  --cd-ease: cubic-bezier(0.2, 0, 0, 1);
+  --cd-dur: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  .cd-root {
+    --cd-dur: 0ms;
+  }
+}

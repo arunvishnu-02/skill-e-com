@@ -1,0 +1,20 @@
+{
+  "name": "dashboard-kit",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reusable dashboard design system built from the master Figma dashboard. Source of truth for the common-dashboard Claude Code skill.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @dashboard-kit/ui && npm run build -w starter",
+    "dev": "npm run dev -w starter",
+    "test": "npm run test -w @dashboard-kit/ui",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "sync-skill": "node scripts/sync-skill.mjs",
+    "install-skill": "bash scripts/install-skill.sh",
+    "shoot": "node scripts/shoot.mjs",
+    "a11y": "node scripts/a11y.mjs"
+  }
+}

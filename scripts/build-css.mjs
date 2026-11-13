@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+const here = dirname(fileURLToPath(import.meta.url));
+const src = resolve(here, "../packages/ui/src/styles");
+const out = resolve(here, "../packages/ui/dist");
+mkdirSync(out, { recursive: true });
+const css = ["tokens.css", "components.css"].map((f) => readFileSync(resolve(src, f), "utf8")).join("\n");
+writeFileSync(resolve(out, "styles.css"), css);
+console.log("styles.css", css.length, "bytes");
